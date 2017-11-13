@@ -24,10 +24,8 @@ my_df <- select(my_df,Date:Sub_metering_3,newdatetime)
 my_df$weekday <- wday(my_df$newdatetime,label=TRUE)
 
 ##Plotting Graph
-## Plot weekdays but without any data 
-plot(x,type="n")
-## Plot weekdays vs Global active power but without any data and x,y axis labels
-#plot(x,type="n",xlab="  ",ylab="Global Active Power (kilowatts)")
+## Plot weekdays 
+plot(my_df$weekday)
 ##Plot newdatetime vs Global active power data to get actual graph
 plot(my_df$newdatetime,my_df$Global_active_power,type="l",xlab = " ",ylab = "  ")
 title(ylab = "Global Active Power (kilowatts)")
