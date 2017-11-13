@@ -25,7 +25,7 @@ my_df$weekday <- wday(my_df$newdatetime,label=TRUE)
 
 ##Plotting graph
 ## Plot weekdays but without any data 
-plot(x,type="n")
+plot(my_df$weekday)
 ##Plot newdatetime vs Submetering on the same graph
 plot(my_df$newdatetime,my_df$Sub_metering_1,type="l",xlab=" ",ylab = "Energy sub metering")
 lines(my_df$newdatetime,my_df$Sub_metering_2,col="red")
